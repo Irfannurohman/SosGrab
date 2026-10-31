@@ -28,6 +28,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* ---------- latar blob ---------- */
@@ -171,36 +173,62 @@ body[data-platform="instagram"] .tab[data-platform="instagram"] {
 
 /* ---------- mobile (HP) ---------- */
 @media (max-width: 480px) {
-  .nav { padding: 16px 16px; }
-  main { padding: 0 14px 32px; }
-  .hero { padding: 34px 0 24px; }
-  .hero h1 { font-size: clamp(26px, 8.4vw, 34px); }
-  .sub { font-size: 15px; margin-top: 10px; }
-  .badge { font-size: 12px; padding: 6px 13px; }
+  .blob { filter: blur(70px); opacity: 0.35; }
+  .b1 { width: 340px; height: 340px; }
+  .b2 { width: 300px; height: 300px; }
+  .b3 { width: 280px; height: 280px; }
 
-  .tool { padding: 13px; border-radius: 15px; }
-  .tabs { gap: 7px; margin-bottom: 12px; }
-  .tab { padding: 8px 13px; font-size: 13px; }
-  .input-wrap { border-radius: 12px; }
-  #url { padding: 13px 0; }
-  .ghost-btn { padding: 7px 11px; font-size: 12.5px; }
-  .cta { border-radius: 12px; font-size: 15px; }
-  .hint { font-size: 12px; margin-top: 9px; }
-  .error { font-size: 13px; padding: 11px 13px; }
+  .nav { padding: 13px 14px; }
+  .logo { font-size: 19px; gap: 8px; }
+  .logo-mark { width: 30px; height: 30px; border-radius: 6px; }
+  main { padding: 0 13px 30px; }
+  .hero { padding: 26px 0 20px; }
+  .hero h1 { font-size: clamp(22px, 6.6vw, 27px); line-height: 1.2; }
+  .sub { font-size: 13.5px; margin-top: 8px; }
+  .badge { font-size: 11px; padding: 5px 11px; gap: 6px; }
+  .badge svg { width: 11px; height: 11px; }
 
-  .card { padding: 13px; gap: 14px; border-radius: 15px; }
-  .result-title { font-size: 15.5px; }
-  .result-meta { gap: 11px; font-size: 12px; }
-  .dl-btn { padding: 11px 12px; border-radius: 12px; }
-  .dl-btn .dl-icon { width: 31px; height: 31px; }
-  .dl-btn .dl-meta b { font-size: 13.5px; }
-  .dl-btn .dl-meta small { font-size: 11.5px; }
+  .tool { padding: 11px; border-radius: 14px; }
+  .tabs { gap: 6px; margin-bottom: 10px; }
+  .tab { padding: 7px 11px; font-size: 12.5px; border-radius: 10px; }
+  .tab svg { width: 14px; height: 14px; }
+  .input-wrap { border-radius: 11px; }
+  #url { padding: 12px 0; font-size: 16px; }
+  .ghost-btn { padding: 6px 10px; font-size: 12px; border-radius: 9px; }
+  .cta { border-radius: 11px; font-size: 14.5px; padding: 13px 20px; }
+  .cta svg { width: 16px; height: 16px; }
+  .hint { font-size: 11.5px; margin-top: 8px; }
+  .error { font-size: 12.5px; padding: 10px 12px; }
 
-  .chip { max-width: 72vw; }
-  .feature { padding: 18px; }
-  .steps-grid li { padding: 16px; font-size: 13.5px; }
-  .faq details { padding: 14px 16px; }
-  footer { padding: 34px 16px 24px; }
+  .card { padding: 12px; gap: 12px; border-radius: 14px; }
+  .result-title { font-size: 14.5px; }
+  .result-byline { gap: 8px; margin-top: 8px; }
+  .avatar-stack, .result-avatar { width: 30px; height: 30px; }
+  .byline-name { font-size: 13px; }
+  .byline-handle { font-size: 11.5px; }
+  .result-meta { gap: 10px; font-size: 11.5px; margin-top: 9px; }
+  .result-meta svg { width: 13px; height: 13px; }
+  .dl-list { gap: 8px; padding-top: 12px; }
+  .dl-btn { padding: 10px 11px; border-radius: 11px; gap: 10px; }
+  .dl-btn .dl-icon { width: 29px; height: 29px; border-radius: 9px; }
+  .dl-btn .dl-icon svg { width: 15px; height: 15px; }
+  .dl-btn .dl-meta b { font-size: 13px; }
+  .dl-btn .dl-meta small { font-size: 11px; }
+  .src-note { font-size: 11px; }
+
+  .chip { max-width: 72vw; font-size: 12px; padding: 6px 12px; }
+  .feature { padding: 15px; }
+  .f-ic { width: 40px; height: 40px; border-radius: 11px; margin-bottom: 11px; }
+  .f-ic svg { width: 19px; height: 19px; }
+  .feature h3 { font-size: 14.5px; }
+  .feature p { font-size: 12.5px; }
+  .steps h2, .faq h2 { font-size: 19px; }
+  .steps-grid li { padding: 14px; font-size: 12.5px; }
+  .steps-grid li span { width: 25px; height: 25px; font-size: 12px; }
+  .faq details { padding: 12px 14px; }
+  .faq summary { font-size: 13px; }
+  .faq details p { font-size: 12.5px; }
+  footer { padding: 30px 14px 22px; font-size: 11.5px; }
 }
 
 .hint { color: #5f6675; font-size: 13px; margin-top: 11px; text-align: center; }
