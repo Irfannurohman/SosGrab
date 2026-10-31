@@ -100,9 +100,15 @@ app.get('/api/download', async (req, res) => {
 
 app.use('/api', (req, res) => res.status(404).json({ ok: false, error: 'Endpoint tidak ditemukan' }));
 
-app.listen(PORT, HOST, () => {
-  console.log('');
-  console.log('  SosGrab siap dipakai!');
-  console.log('  Buka di browser: http://localhost:' + PORT);
-  console.log('');
-});
+// Jalankan server lokal hanya saat dieksekusi langsung.
+// Di Vercel, app ini di-export sebagai serverless function (lihat api/index.js).
+if (require.main === module) {
+  app.listen(PORT, HOST, () => {
+    console.log('');
+    console.log('  SosGrab siap dipakai!');
+    console.log('  Buka di browser: http://localhost:' + PORT);
+    console.log('');
+  });
+}
+
+module.exports = app;
