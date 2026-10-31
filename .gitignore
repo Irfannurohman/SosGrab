@@ -1,0 +1,10 @@
+# dependensi
+node_modules/
+
+# rahasia & log
+.env
+*.log
+
+# file sistem
+Thumbs.db
+.DS_Store

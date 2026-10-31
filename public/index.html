@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07080d">
+  <title>SosGrab — Unduh Video & Foto TikTok, YouTube, Facebook & Instagram</title>
+  <meta name="description" content="SosGrab: downloader video TikTok tanpa watermark, YouTube, Facebook, dan Instagram. Tempel link, langsung unduh.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-platform="auto">
+
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
+
+  <header class="nav">
+    <div class="logo">
+      <img src="/logo.png" alt="Logo SosGrab" class="logo-mark" width="34" height="34">
+      <span>Sos<em>Grab</em></span>
+    </div>
+    <nav class="nav-links">
+      <a href="#platform">Platform</a>
+      <a href="#cara">Cara Pakai</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor"/></svg>
+        Cepat · Gratis · Tanpa pasang aplikasi
+      </div>
+      <h1>Unduh Video &amp; Foto dari<br>
+        <span class="grad-text tt">TikTok</span>,
+        <span class="grad-text yt">YouTube</span>,
+        <span class="grad-text fb">Facebook</span> &amp;
+        <span class="grad-text ig">Instagram</span>
+      </h1>
+      <p class="sub">Tempel tautannya, kami yang urus sisanya — video tanpa watermark, foto kualitas asli, sampai audionya.</p>
+    </section>
+
+    <section class="tool" id="platform">
+      <div class="tabs" role="tablist" id="tabs">
+        <button class="tab active" data-platform="auto" role="tab">
+          <svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L9.5 22 19.5 9.5H13L13 2z" fill="currentColor"/></svg>
+          Auto
+        </button>
+        <button class="tab" data-platform="tiktok" role="tab">
+          <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" fill="currentColor"/></svg>
+          TikTok
+        </button>
+        <button class="tab" data-platform="youtube" role="tab">
+          <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"/></svg>
+          YouTube
+        </button>
+        <button class="tab" data-platform="facebook" role="tab">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="currentColor"/></svg>
+          Facebook
+        </button>
+        <button class="tab" data-platform="instagram" role="tab">
+          <svg viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm7.938-10.346c-.725 0-1.313-.59-1.313-1.313 0-.724.588-1.312 1.313-1.312.723 0 1.312.588 1.312 1.312 0 .724-.589 1.313-1.312 1.313" fill="currentColor"/></svg>
+          Instagram
+        </button>
+      </div>
+
+      <form id="form" class="input-row" autocomplete="off">
+        <div class="input-wrap">
+          <svg class="link-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <input id="url" type="url" placeholder="Tempel link video di sini… (https://…)" spellcheck="false">
+          <button type="button" id="pasteBtn" class="ghost-btn">Tempel</button>
+        </div>
+        <button type="submit" id="goBtn" class="cta">
+          <span>Unduh Sekarang</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        </button>
+      </form>
+      <p class="hint" id="detectHint">Tempel link TikTok / YouTube / Facebook / Instagram — platform terdeteksi otomatis.</p>
+      <div id="error" class="error hidden" role="alert"></div>
+    </section>
+
+    <section id="loading" class="hidden" aria-hidden="true">
+      <div class="card skeleton">
+        <div class="sk-thumb shimmer"></div>
+        <div class="sk-body">
+          <div class="sk-line w70 shimmer"></div>
+          <div class="sk-line w40 shimmer"></div>
+          <div class="sk-btns">
+            <div class="sk-btn shimmer"></div>
+            <div class="sk-btn shimmer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="result" class="hidden"></section>
+
+    <section id="history" class="hidden">
+      <div class="history-head">
+        <h2>Riwayat</h2>
+        <button id="clearHistory" type="button">Hapus semua</button>
+      </div>
+      <div id="historyList" class="history-list"></div>
+    </section>
+
+    <section class="features" id="cara">
+      <article class="feature">
+        <div class="f-ic tt-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        </div>
+        <h3>Tanpa Watermark</h3>
+        <p>Video &amp; foto TikTok diambil bersih tanpa logo, siap dipakai ulang.</p>
+      </article>
+      <article class="feature">
+        <div class="f-ic yt-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <h3>Semua Kualitas</h3>
+        <p>Pilih resolusi terbaik yang tersedia, atau ambil file audionya saja.</p>
+      </article>
+      <article class="feature">
+        <div class="f-ic fb-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>Tanpa Login</h3>
+        <p>Tidak perlu akun, tidak ada data yang disimpan di server manapun.</p>
+      </article>
+    </section>
+
+    <section class="steps" id="cara-2">
+      <h2>Cara pakainya</h2>
+      <ol class="steps-grid">
+        <li><span>1</span> Salin link video atau foto dari aplikasi/browser.</li>
+        <li><span>2</span> Tempel di kolom atas, klik <b>Unduh Sekarang</b>.</li>
+        <li><span>3</span> Pilih versi yang mau diunduh — selesai!</li>
+      </ol>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Kenapa YouTube kadang gagal?</summary>
+        <p>YouTube membatasi akses unduhan dari luar. SosGrab memakai beberapa server pintu masuk, tapi bisa penuh. Cara paling andal: pasang <b>yt-dlp</b> di PC ini (lihat README.md) — SosGrab otomatis memakainya.</p>
+      </details>
+      <details>
+        <summary>Post Instagram apa saja yang bisa diunduh?</summary>
+        <p>Post dan reels yang <b>publik</b>. Akun private, story, dan konten yang butuh login tidak didukung. Post multi-file (carousel) akan muncul sebagai beberapa tombol unduhan.</p>
+      </details>
+      <details>
+        <summary>Video Facebook privat bisa diunduh?</summary>
+        <p>Tidak. Hanya video publik yang bisa diunduh, karena yang privat butuh login kamu.</p>
+      </details>
+      <details>
+        <summary>Apakah link yang saya tempel disimpan?</summary>
+        <p>Riwayat hanya tersimpan di browser kamu (localStorage) dan bisa dihapus kapan saja dengan tombol Hapus semua.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p><b>SosGrab</b> — alat independen, tidak berafiliasi dengan TikTok, YouTube, Meta, atau Instagram.</p>
+    <p>Gunakan hanya untuk konten milikmu sendiri atau yang kamu punya izin. Hormati ketentuan layanan tiap platform.</p>
+  </footer>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
