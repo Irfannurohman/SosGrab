@@ -5,8 +5,11 @@ const { fetchWithTimeout } = require('./util');
 // Instance cobalt publik (best-effort, bisa penuh/berubah kapan saja)
 const INSTANCES = [
   'https://dwnld.nichind.dev',
-  'https://cobalt-api.kwiatekmiki.com',
-  'https://capi.oak.li',
+  'https://api.dwnld.nichind.dev',
+  'https://nyc1.coapi.ggtyler.dev',
+  'https://capi.3kh0.net',
+  'https://co.otomir23.me',
+  'https://cobalt.q444.eu.org',
   'https://cobalt-backend.canine.tools',
 ];
 
