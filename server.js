@@ -10,6 +10,7 @@ const tiktok = require('./resolvers/tiktok');
 const youtube = require('./resolvers/youtube');
 const facebook = require('./resolvers/facebook');
 const instagram = require('./resolvers/instagram');
+const threads = require('./resolvers/threads');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,7 +19,7 @@ const HOST = process.env.HOST || '127.0.0.1';
 app.disable('x-powered-by');
 app.use(express.static(path.join(__dirname, 'public')));
 
-const RESOLVERS = { tiktok, youtube, facebook, instagram };
+const RESOLVERS = { tiktok, youtube, facebook, instagram, threads };
 
 app.get('/api/platforms', (req, res) => {
   res.json({

@@ -136,18 +136,36 @@ async function resolve(url) {
     const downloads = [];
     if (found.hd) downloads.push({ label: 'Video HD', quality: 'HD', ext: 'mp4', url: found.hd });
     if (found.sd) downloads.push({ label: 'Video SD', quality: 'SD', ext: 'mp4', url: found.sd });
+    // audio terpisah, best-effort lewat server cobalt
+    try {
+      const a = await cobalt.pickUrl(url, { audioOnly: true });
+      downloads.push({ label: 'Audio saja (MP3)', quality: 'Audio', ext: 'mp3', url: a.url });
+    } catch {
+      /* audio opsional */
+    }
     return toResult(downloads, metaTags, 'halaman Facebook');
   }
 
-  // 3) Facebook sering menutup halaman dengan login-wall → fallback cobalt
+  // 3) Facebook sering menutup halaman dengan login-wall → fallback cobalt (video)
   try {
     const v = await cobalt.pickUrl(url);
-    return toResult(
-      [{ label: 'Video · kualitas terbaik', quality: 'MP4', ext: 'mp4', url: v.url }],
-      metaTags,
-      v.source
-    );
+    const downloads = [{ label: 'Video · kualitas terbaik', quality: 'MP4', ext: 'mp4', url: v.url }];
+    try {
+      const a = await cobalt.pickUrl(url, { audioOnly: true });
+      downloads.push({ label: 'Audio saja (MP3)', quality: 'Audio', ext: 'mp3', url: a.url });
+    } catch {
+      /* audio opsional */
+    }
+    return toResult(downloads, metaTags, v.source);
   } catch {
+    // 4) Terakhir: bila ada og:image → tawarkan sebagai foto (best-effort)
+    if (metaTags.image) {
+      return toResult(
+        [{ label: 'Foto (kualitas preview)', quality: 'JPG', ext: 'jpg', url: metaTags.image }],
+        metaTags,
+        'halaman Facebook'
+      );
+    }
     throw new Error(
       'Tautan video tidak ditemukan. Pastikan video bersifat PUBLIK (bukan privat/hanya-teman) dan link benar. ' +
         'Video Facebook yang butuh login tidak bisa diunduh.'

@@ -1,13 +1,14 @@
-# SosGrab — Sosmed Video Downloader
+# DOWNLOADER (dulu SosGrab) — Sosmed Video Downloader
 
-Downloader video **TikTok**, **YouTube**, **Facebook**, dan **Instagram** dengan UI sendiri (dark, glassmorphism, ikon resmi tiap platform) — terinspirasi situs sejenis seperti fastdl.app tapi desain dan kodenya dibuat dari nol.
+Downloader video & foto **TikTok**, **YouTube**, **Facebook**, **Instagram**, dan **Threads** dengan UI sendiri (dark, glassmorphism, ikon resmi tiap platform) — dibuat dari nol, bukan hasil clone kode.
 
 ## Fitur
 
 - ✅ **TikTok** — video HD/SD tanpa watermark, video dengan watermark, post foto (semua slide), dan audio MP3
 - ✅ **YouTube** — unduh video (via server pintu masuk publik / yt-dlp) + audio m4a
-- ✅ **Facebook** — video publik HD/SD (termasuk link `fb.watch`, reels, watch, share)
-- ✅ **Instagram** — reels & video post publik; post foto best-effort (tergantung server)
+- ✅ **Facebook** — video publik HD/SD (termasuk link `fb.watch`, reels, watch, share) + audio MP3 best-effort & foto via og:image
+- ✅ **Instagram** — reels & video post publik (+ audio MP3 best-effort), post foto via endpoint media publik
+- ✅ **Threads** — post foto (og:image) & video (video_versions) publik; audio menyatu di file video
 - ✅ Deteksi platform otomatis dari link
 - ✅ Riwayat link di browser (localStorage, bisa dihapus)
 - ✅ Proxy unduhan agar file tersimpan langsung (bukan diputar di browser)

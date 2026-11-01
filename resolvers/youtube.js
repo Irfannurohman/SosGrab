@@ -157,12 +157,18 @@ async function resolve(url) {
   try {
     const v = await cobalt.pickUrl(url);
     const downloads = [{ label: 'Video · kualitas terbaik', quality: 'MP4', ext: 'mp4', url: v.url }];
-    try {
-      const a = await cobalt.pickUrl(url, { audioOnly: true });
-      downloads.push({ label: 'Audio saja (MP3)', quality: 'Audio', ext: 'mp3', url: a.url });
-    } catch {
-      /* audio opsional */
+
+    // audio: 2 percobaan (server kadang menolak di percobaan pertama)
+    let audio = null;
+    for (let i = 0; i < 2 && !audio; i++) {
+      try {
+        audio = await cobalt.pickUrl(url, { audioOnly: true });
+      } catch {
+        if (i === 0) await new Promise((r) => setTimeout(r, 900));
+      }
     }
+    if (audio) downloads.push({ label: 'Audio saja (MP3)', quality: 'Audio', ext: 'mp3', url: audio.url });
+
     return decorate({ title: 'Video YouTube', downloads, source: v.source }, om);
   } catch (err) {
     throw new Error(

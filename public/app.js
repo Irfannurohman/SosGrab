@@ -31,6 +31,7 @@ function detectPlatform(url) {
     if (h.endsWith('youtube.com') || h === 'youtu.be' || h.endsWith('youtube-nocookie.com')) return 'youtube';
     if (h.endsWith('facebook.com') || h === 'fb.watch' || h === 'fb.me') return 'facebook';
     if (h.endsWith('instagram.com') || h === 'instagr.am' || h.endsWith('instagr.am')) return 'instagram';
+    if (h === 'threads.net' || h.endsWith('threads.net') || h === 'threads.com' || h.endsWith('threads.com')) return 'threads';
   } catch { /* bukan URL */ }
   return null;
 }
@@ -90,7 +91,7 @@ function slugify(s) {
 }
 
 function buildFilename(title, platform, d) {
-  return `${slugify(title)}-SosGrab-${platform}${d.quality ? '-' + d.quality.replace(/\s+/g, '') : ''}.${d.ext || 'mp4'}`;
+  return `${slugify(title)}-DOWNLOADER-${platform}${d.quality ? '-' + d.quality.replace(/\s+/g, '') : ''}.${d.ext || 'mp4'}`;
 }
 
 function showError(msg) {
@@ -154,7 +155,7 @@ function selectTab(p) {
     const d = detectPlatform(urlInput.value.trim());
     detectHint.textContent = d
       ? 'Link ' + d + ' terdeteksi ✓ — klik Unduh Sekarang.'
-      : 'Tempel link TikTok / YouTube / Facebook / Instagram — platform terdeteksi otomatis.';
+      : 'Tempel link TikTok / YouTube / Facebook / Instagram / Threads — platform terdeteksi otomatis.';
   } else {
     detectHint.textContent = 'Mode manual: ' + p + '. Link di luar ' + p + ' akan ditolak.';
   }

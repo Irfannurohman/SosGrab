@@ -80,6 +80,13 @@ async function resolve(url) {
           url: d.url,
         };
       });
+      // audio terpisah, best-effort
+      try {
+        const a = await cobalt.pickUrl(url, { audioOnly: true });
+        downloads.push({ label: 'Audio saja (MP3)', quality: 'Audio', ext: 'mp3', url: a.url });
+      } catch {
+        /* audio opsional */
+      }
       return {
         kind: downloads.some((d) => d.ext === 'mp4') && !many ? 'video' : 'photo',
         title: 'Reels Instagram',

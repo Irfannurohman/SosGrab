@@ -49,7 +49,7 @@ body {
   max-width: 1060px; margin: 0 auto; padding: 20px 24px;
 }
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 22px; letter-spacing: -0.02em; }
-.logo em { font-style: normal; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.logo .brand-name { color: #ffffff; }
 .logo-mark {
   width: 34px; height: 34px; display: block;
   border-radius: 7px;
@@ -76,6 +76,7 @@ main { max-width: 1060px; margin: 0 auto; padding: 0 24px 40px; }
 .grad-text.yt { background-image: linear-gradient(135deg, #ff5e7e, var(--yt)); }
 .grad-text.fb { background-image: linear-gradient(135deg, #5aa9ff, var(--fb)); }
 .grad-text.ig { background-image: linear-gradient(135deg, #f9ce34, #ee2a7b 60%, #6228d7); }
+.grad-text.thr { background-image: linear-gradient(135deg, #eef1f6, #8d97a8); }
 .sub { color: var(--muted); font-size: 17px; margin-top: 14px; max-width: 560px; margin-inline: auto; }
 
 /* ---------- tool ---------- */
@@ -127,6 +128,10 @@ body[data-platform="facebook"] .tab[data-platform="facebook"] {
 body[data-platform="instagram"] .tab[data-platform="instagram"] {
   background: linear-gradient(135deg, rgba(131, 58, 180, 0.28), rgba(236, 64, 122, 0.22));
   border-color: #e1306c;
+}
+body[data-platform="threads"] .tab[data-platform="threads"] {
+  background: linear-gradient(135deg, rgba(238, 241, 246, 0.2), rgba(141, 151, 168, 0.14));
+  border-color: #aeb6c2;
 }
 
 .input-row { display: flex; gap: 10px; }
@@ -302,6 +307,7 @@ body[data-platform="tiktok"] .dl-btn.primary { background: linear-gradient(135de
 body[data-platform="youtube"] .dl-btn.primary { background: linear-gradient(135deg, #ff5e7e, var(--yt)); }
 body[data-platform="facebook"] .dl-btn.primary { background: linear-gradient(135deg, #5aa9ff, var(--fb)); }
 body[data-platform="instagram"] .dl-btn.primary { background: linear-gradient(135deg, #833ab4, #fd1d1d 55%, #fcb045); }
+body[data-platform="threads"] .dl-btn.primary { background: linear-gradient(135deg, #6b7280, #111827); }
 .src-note { font-size: 11.5px; color: #5f6675; margin-top: 8px; }
 
 /* ---------- skeleton ---------- */
@@ -338,7 +344,7 @@ body[data-platform="instagram"] .dl-btn.primary { background: linear-gradient(13
 }
 .chip:hover { color: var(--text); border-color: var(--border-hi); }
 .chip .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-.dot.tiktok { background: var(--tt); } .dot.youtube { background: var(--yt); } .dot.facebook { background: var(--fb); } .dot.instagram { background: #e1306c; }
+.dot.tiktok { background: var(--tt); } .dot.youtube { background: var(--yt); } .dot.facebook { background: var(--fb); } .dot.instagram { background: #e1306c; } .dot.threads { background: #cfd4dc; }
 .chip span.ell { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ---------- features & steps & faq ---------- */
