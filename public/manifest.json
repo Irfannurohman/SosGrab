@@ -1,0 +1,16 @@
+{
+  "name": "DOWNLOADER — Unduh Video & Foto",
+  "short_name": "DOWNLOADER",
+  "description": "Unduh video & foto dari TikTok, YouTube, Facebook, Instagram, dan Threads.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#07080d",
+  "icons": [
+    { "src": "/logo-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/logo-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
